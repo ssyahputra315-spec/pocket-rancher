@@ -153,3 +153,33 @@
     color: var(--color-foreground);
   }
 }
+
+.dark {
+  --leaf: oklch(0.72 0.11 149);
+  --leaf-soft: oklch(0.32 0.05 149);
+  --rust-soft: oklch(0.34 0.06 47);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+  }
+  h1, h2, h3 {
+    font-family: var(--font-body);
+  }
+}
+
+@utility ledger-hero {
+  background:
+    radial-gradient(120% 120% at 0% 0%, oklch(0.6 0.15 47) 0%, transparent 60%),
+    linear-gradient(140deg, oklch(0.35 0.09 45) 0%, oklch(0.26 0.035 60) 100%);
+}
+
+@utility grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image: radial-gradient(oklch(1 0 0 / 55%) 0.5px, transparent 0.5px);
+  background-size: 5px 5px;
+}
