@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    // Emit static HTML so Capacitor can package the app offline.
+    prerender: { routes: ["/", "/livestock", "/feed", "/finance", "/more"], crawlLinks: false },
+  },
 });
