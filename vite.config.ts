@@ -11,5 +11,10 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Emit static HTML for all routes so Capacitor can package the app offline.
+    pages: ["/", "/livestock", "/feed", "/finance", "/more"].map((path) => ({
+      path,
+      prerender: { enabled: true },
+    })),
   },
 });
