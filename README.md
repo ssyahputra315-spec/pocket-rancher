@@ -27,3 +27,12 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+
+## Android (Capacitor)
+
+1. `bun run build`
+2. `bunx cap add android` (first time only)
+3. `bunx cap sync android`
+4. `bunx cap open android` and build/run from Android Studio.
+
+All data is stored on the device, so the app works fully offline after install.
